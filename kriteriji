@@ -1,0 +1,10 @@
+- Kods atbilst izvirzītam prasībam 
+ - Ir ievaddatu validācija (pārbaude ka tika ierakstīti korrekti dati)
+ - Mainīgie rakstīti snake_case, bez saisinājumiem
+ - Ir komentāri pirms if, for, while kosntrukcijam
+ - Kods atbilst izvirzītam prasībam
+ - Izmaiņas saglabātas Github repozitorijā
+ - Izmaiņas saglabātas vairākas iterācijās (vairāki commit)
+ - Izmantoti saraksti vai vārdnīcas vai klases
+ - Izmantota jebkura bibliotēka (modulis uzinstalēts ar PIP un izmantots kodā) ir
+ - Izmantoti JSON faili vai SQLite datubāze datu glabāšanai
