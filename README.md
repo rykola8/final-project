@@ -1,5 +1,7 @@
 # Finals projekts
 
+**Katrs punkts - 0,5 balle**
+
 ## Prezentācija
  - Analīze - problēmas apraksts, kāpēc problēma tika uzskatīta par aktuālo, kam tas noderētu, aprakstīti eksistējoši lidzīgi risinājumi
  - Specifikācija - aprakstītas funkcionālas un nefunkcionālas prasības
