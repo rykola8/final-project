@@ -14,7 +14,7 @@
  - Ir ievaddatu validācija (pārbaude ka tika ierakstīti korrekti dati)
  - Mainīgie rakstīti snake_case, bez saisinājumiem
  - Ir komentāri pirms if, for, while kosntrukcijam
- - Kods atbilst izvirzītam prasībam
+ - Kods nemet kļūdas darbības laikā
  - Izmaiņas saglabātas Github repozitorijā
  - Izmaiņas saglabātas vairākas iterācijās (vairāki commit)
  - Izmantoti saraksti vai vārdnīcas vai klases
