@@ -1,0 +1,492 @@
+[
+ {
+   "number": 1,
+   "name": "Bulbasaur",
+   "type_1": "Grass",
+   "type_2": "Poison",
+   "total": 318,
+   "hp": 45,
+   "attack": 49,
+   "defense": 49
+ },
+ {
+   "number": 2,
+   "name": "Ivysaur",
+   "type_1": "Grass",
+   "type_2": "Poison",
+   "total": 405,
+   "hp": 60,
+   "attack": 62,
+   "defense": 63
+ },
+ {
+   "number": 3,
+   "name": "Venusaur",
+   "type_1": "Grass",
+   "type_2": "Poison",
+   "total": 525,
+   "hp": 80,
+   "attack": 82,
+   "defense": 83
+ },
+ {
+   "number": 3,
+   "name": "VenusaurMega Venusaur",
+   "type_1": "Grass",
+   "type_2": "Poison",
+   "total": 625,
+   "hp": 80,
+   "attack": 100,
+   "defense": 123
+ },
+ {
+   "number": 4,
+   "name": "Charmander",
+   "type_1": "Fire",
+   "type_2": "",
+   "total": 309,
+   "hp": 39,
+   "attack": 52,
+   "defense": 43
+ },
+ {
+   "number": 5,
+   "name": "Charmeleon",
+   "type_1": "Fire",
+   "type_2": "",
+   "total": 405,
+   "hp": 58,
+   "attack": 64,
+   "defense": 58
+ },
+ {
+   "number": 6,
+   "name": "Charizard",
+   "type_1": "Fire",
+   "type_2": "Flying",
+   "total": 534,
+   "hp": 78,
+   "attack": 84,
+   "defense": 78
+ },
+ {
+   "number": 6,
+   "name": "CharizardMega Charizard X",
+   "type_1": "Fire",
+   "type_2": "Dragon",
+   "total": 634,
+   "hp": 78,
+   "attack": 130,
+   "defense": 111
+ },
+ {
+   "number": 6,
+   "name": "CharizardMega Charizard Y",
+   "type_1": "Fire",
+   "type_2": "Flying",
+   "total": 634,
+   "hp": 78,
+   "attack": 104,
+   "defense": 78
+ },
+ {
+   "number": 7,
+   "name": "Squirtle",
+   "type_1": "Water",
+   "type_2": "",
+   "total": 314,
+   "hp": 44,
+   "attack": 48,
+   "defense": 65
+ },
+ {
+   "number": 8,
+   "name": "Wartortle",
+   "type_1": "Water",
+   "type_2": "",
+   "total": 405,
+   "hp": 59,
+   "attack": 63,
+   "defense": 80
+ },
+ {
+   "number": 9,
+   "name": "Blastoise",
+   "type_1": "Water",
+   "type_2": "",
+   "total": 530,
+   "hp": 79,
+   "attack": 83,
+   "defense": 100
+ },
+ {
+   "number": 9,
+   "name": "BlastoiseMega Blastoise",
+   "type_1": "Water",
+   "type_2": "",
+   "total": 630,
+   "hp": 79,
+   "attack": 103,
+   "defense": 120
+ },
+ {
+   "number": 10,
+   "name": "Caterpie",
+   "type_1": "Bug",
+   "type_2": "",
+   "total": 195,
+   "hp": 45,
+   "attack": 30,
+   "defense": 35
+ },
+ {
+   "number": 11,
+   "name": "Metapod",
+   "type_1": "Bug",
+   "type_2": "",
+   "total": 205,
+   "hp": 50,
+   "attack": 20,
+   "defense": 55
+ },
+ {
+   "number": 12,
+   "name": "Butterfree",
+   "type_1": "Bug",
+   "type_2": "Flying",
+   "total": 395,
+   "hp": 60,
+   "attack": 45,
+   "defense": 50
+ },
+ {
+   "number": 13,
+   "name": "Weedle",
+   "type_1": "Bug",
+   "type_2": "Poison",
+   "total": 195,
+   "hp": 40,
+   "attack": 35,
+   "defense": 30
+ },
+ {
+   "number": 14,
+   "name": "Kakuna",
+   "type_1": "Bug",
+   "type_2": "Poison",
+   "total": 205,
+   "hp": 45,
+   "attack": 25,
+   "defense": 50
+ },
+ {
+   "number": 15,
+   "name": "Beedrill",
+   "type_1": "Bug",
+   "type_2": "Poison",
+   "total": 395,
+   "hp": 65,
+   "attack": 90,
+   "defense": 40
+ },
+ {
+   "number": 15,
+   "name": "BeedrillMega Beedrill",
+   "type_1": "Bug",
+   "type_2": "Poison",
+   "total": 495,
+   "hp": 65,
+   "attack": 150,
+   "defense": 40
+ },
+ {
+   "number": 16,
+   "name": "Pidgey",
+   "type_1": "Normal",
+   "type_2": "Flying",
+   "total": 251,
+   "hp": 40,
+   "attack": 45,
+   "defense": 40
+ },
+ {
+   "number": 17,
+   "name": "Pidgeotto",
+   "type_1": "Normal",
+   "type_2": "Flying",
+   "total": 349,
+   "hp": 63,
+   "attack": 60,
+   "defense": 55
+ },
+ {
+   "number": 18,
+   "name": "Pidgeot",
+   "type_1": "Normal",
+   "type_2": "Flying",
+   "total": 479,
+   "hp": 83,
+   "attack": 80,
+   "defense": 75
+ },
+ {
+   "number": 18,
+   "name": "PidgeotMega Pidgeot",
+   "type_1": "Normal",
+   "type_2": "Flying",
+   "total": 579,
+   "hp": 83,
+   "attack": 80,
+   "defense": 80
+ },
+ {
+   "number": 19,
+   "name": "Rattata",
+   "type_1": "Normal",
+   "type_2": "",
+   "total": 253,
+   "hp": 30,
+   "attack": 56,
+   "defense": 35
+ },
+ {
+   "number": 20,
+   "name": "Raticate",
+   "type_1": "Normal",
+   "type_2": "",
+   "total": 413,
+   "hp": 55,
+   "attack": 81,
+   "defense": 60
+ },
+ {
+   "number": 21,
+   "name": "Spearow",
+   "type_1": "Normal",
+   "type_2": "Flying",
+   "total": 262,
+   "hp": 40,
+   "attack": 60,
+   "defense": 30
+ },
+ {
+   "number": 22,
+   "name": "Fearow",
+   "type_1": "Normal",
+   "type_2": "Flying",
+   "total": 442,
+   "hp": 65,
+   "attack": 90,
+   "defense": 65
+ },
+ {
+   "number": 23,
+   "name": "Ekans",
+   "type_1": "Poison",
+   "type_2": "",
+   "total": 288,
+   "hp": 35,
+   "attack": 60,
+   "defense": 44
+ },
+ {
+   "number": 24,
+   "name": "Arbok",
+   "type_1": "Poison",
+   "type_2": "",
+   "total": 438,
+   "hp": 60,
+   "attack": 85,
+   "defense": 69
+ },
+ {
+   "number": 25,
+   "name": "Pikachu",
+   "type_1": "Electric",
+   "type_2": "",
+   "total": 320,
+   "hp": 35,
+   "attack": 55,
+   "defense": 40
+ },
+ {
+   "number": 26,
+   "name": "Raichu",
+   "type_1": "Electric",
+   "type_2": "",
+   "total": 485,
+   "hp": 60,
+   "attack": 90,
+   "defense": 55
+ },
+ {
+   "number": 27,
+   "name": "Sandshrew",
+   "type_1": "Ground",
+   "type_2": "",
+   "total": 300,
+   "hp": 50,
+   "attack": 75,
+   "defense": 85
+ },
+ {
+   "number": 28,
+   "name": "Sandslash",
+   "type_1": "Ground",
+   "type_2": "",
+   "total": 450,
+   "hp": 75,
+   "attack": 100,
+   "defense": 110
+ },
+ {
+   "number": 29,
+   "name": "Nidoran♀",
+   "type_1": "Poison",
+   "type_2": "",
+   "total": 275,
+   "hp": 55,
+   "attack": 47,
+   "defense": 52
+ },
+ {
+   "number": 30,
+   "name": "Nidorina",
+   "type_1": "Poison",
+   "type_2": "",
+   "total": 365,
+   "hp": 70,
+   "attack": 62,
+   "defense": 67
+ },
+ {
+   "number": 31,
+   "name": "Nidoqueen",
+   "type_1": "Poison",
+   "type_2": "Ground",
+   "total": 505,
+   "hp": 90,
+   "attack": 92,
+   "defense": 87
+ },
+ {
+   "number": 32,
+   "name": "Nidoran♂",
+   "type_1": "Poison",
+   "type_2": "",
+   "total": 273,
+   "hp": 46,
+   "attack": 57,
+   "defense": 40
+ },
+ {
+   "number": 33,
+   "name": "Nidorino",
+   "type_1": "Poison",
+   "type_2": "",
+   "total": 365,
+   "hp": 61,
+   "attack": 72,
+   "defense": 57
+ },
+ {
+   "number": 34,
+   "name": "Nidoking",
+   "type_1": "Poison",
+   "type_2": "Ground",
+   "total": 505,
+   "hp": 81,
+   "attack": 102,
+   "defense": 77
+ },
+ {
+   "number": 35,
+   "name": "Clefairy",
+   "type_1": "Fairy",
+   "type_2": "",
+   "total": 323,
+   "hp": 70,
+   "attack": 45,
+   "defense": 48
+ },
+ {
+   "number": 36,
+   "name": "Clefable",
+   "type_1": "Fairy",
+   "type_2": "",
+   "total": 483,
+   "hp": 95,
+   "attack": 70,
+   "defense": 73
+ },
+ {
+   "number": 37,
+   "name": "Vulpix",
+   "type_1": "Fire",
+   "type_2": "",
+   "total": 299,
+   "hp": 38,
+   "attack": 41,
+   "defense": 40
+ },
+ {
+   "number": 38,
+   "name": "Ninetales",
+   "type_1": "Fire",
+   "type_2": "",
+   "total": 505,
+   "hp": 73,
+   "attack": 76,
+   "defense": 75
+ },
+ {
+   "number": 39,
+   "name": "Jigglypuff",
+   "type_1": "Normal",
+   "type_2": "Fairy",
+   "total": 270,
+   "hp": 115,
+   "attack": 45,
+   "defense": 20
+ },
+ {
+   "number": 40,
+   "name": "Wigglytuff",
+   "type_1": "Normal",
+   "type_2": "Fairy",
+   "total": 435,
+   "hp": 140,
+   "attack": 70,
+   "defense": 45
+ },
+ {
+   "number": 41,
+   "name": "Zubat",
+   "type_1": "Poison",
+   "type_2": "Flying",
+   "total": 245,
+   "hp": 40,
+   "attack": 45,
+   "defense": 35
+ },
+ {
+   "number": 42,
+   "name": "Golbat",
+   "type_1": "Poison",
+   "type_2": "Flying",
+   "total": 455,
+   "hp": 75,
+   "attack": 80,
+   "defense": 70
+ },
+ {
+   "number": 43,
+   "name": "Oddish",
+   "type_1": "Grass",
+   "type_2": "Poison",
+   "total": 320,
+   "hp": 45,
+   "attack": 50,
+   "defense": 55
+ }
+]
