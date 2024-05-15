@@ -1,14 +1,22 @@
 from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
-
+import json
+import random
 
 # izveido bota pieslēgumu Telegram
 app = ApplicationBuilder().token("7012624613:AAE99uS7aVj_Ldqai9UzoegoJvxq-bnizpM").build()
 
-# # komanda /start
-# async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     await update.message.reply_text("I'm test bot. Type /hello or /echo")
+#функции:
+async def jokes_la():
+    with open('jokes.json', 'r', encoding='utf-8') as joke_file:
+        jokes = json.load(joke_file)
+    random_joke = random.choice(jokes)
+    return random_joke['joke']
 
+
+
+
+#телеграм команды:
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Starts the conversation and to ask the user what he wants to hear."""
     reply_keyboard = [["/jokes", "/quotations"],
@@ -22,17 +30,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         ),
     )
 
-
+ 
 async def jokes(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.effective_user)
-    await update.message.reply_text("Hello " + update.effective_user.first_name)
+    await update.message.reply_text(await jokes_la())
 
 
 async def msg(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Retrieve passport data
     text = update.message.text
     print(text)
-    await update.message.reply_text("Receive: " + text)
+    await update.message.reply_text("What? Let me tell a joke/quote/advice/lifehack.")
 
     
 
