@@ -2,6 +2,8 @@ from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 import json
 import random
+import string
+import qrcode
 
 # izveido bota pieslēgumu Telegram
 app = ApplicationBuilder().token("7012624613:AAE99uS7aVj_Ldqai9UzoegoJvxq-bnizpM").build()
@@ -27,16 +29,24 @@ async def advices_la():
         advices = json.load(advices_file)
     random_advices = random.choice(advices)
     return random_advices['advices']
+async def generate_password(length):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    generated_password = generate_password(length)
+    print("Your password:", generated_password)
+    return password
 
 
+    
 
+    
 
 #телеграм команды:
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Starts the conversation and to ask the user what he wants to hear."""
     reply_keyboard = [["/jokes", "/quotations"],
                       ["/advices", "/lifehacks"],
-                      ["/password", "/qrcode"],]
+                      ["/password"],]
 
     await update.message.reply_text(
         "Hi! My name is Rykola Bot. I will hold a conversation with you. "
@@ -63,6 +73,10 @@ async def advices(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.effective_user)
     await update.message.reply_text(await advices_la())
 
+async def password(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    print(update.effective_user)
+    await update.message.reply_text(await generate_password(10))
+
 
 async def msg(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Retrieve passport data
@@ -78,6 +92,7 @@ app.add_handler(CommandHandler("jokes", jokes))
 app.add_handler(CommandHandler("lifehacks", lifehacks))
 app.add_handler(CommandHandler("quotations", quotations))
 app.add_handler(CommandHandler("advices", advices))
+app.add_handler(CommandHandler("password", password))
 # app.add_handler(CommandHandler("echo", echo))
 app.add_handler(MessageHandler(filters.TEXT, msg)) # type: ignore
 
