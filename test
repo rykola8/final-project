@@ -1,0 +1,15 @@
+#2 happy path:
+1. Lietotājs nosūta komandu /jokes. Botam tiek atbildēts ar nejaušu joku no datubāzes. Lietotājs smejas un ir apmierināts ar atbildi.
+2. Lietotājs nosūta komandu /quotations. Bots izvēlas nejaušu citātu no datubāzes un nosūta to lietotājam. Lietotājs saņem iedvesmojošu citātu un dalās ar to sociālajos tīklos.
+
+#4 use-cases:
+1. Lietotājs ieraksta jebkuru tekstu, un bots atbild ar tekstu: "What? press /help for a list of commands" 
+2. Lietotājs nosūta komandu /help. Botam tiek sniegts pieejamo komandu saraksts un īss to apraksts. Lietotājs saprot, kā mijiedarboties ar robotu un kādas komandas ir pieejamas.
+3. Lietotājs nosūta komandu /quotations1. Bots izvēlas nejaušu citātu no datubāzes un nosūta to lietotājam kopā ar autora vārdu. 
+4. Lietotājs nosūta komandu /echo. Bot izvada lietotāja tekstu ar vārdiem "I hear:"
+
+#4 edge-cases:
+1. Lietotājs nosūta komandu, kas nav sarakstā (piemēram, /jke). Bots atbild ar kļūdas ziņojumu, paskaidrojot, ka komanda nav atpazīta, un iesaka izmantot /help, lai iegūtu komandu sarakstu.
+2. Lietotājs nosūta tekstu ar komandu aiz tā (piemēram: hello world /echo). Bots atbild, ka to neatpazīst un iesaka izmantot /help, lai iegūtu komandu sarakstu.
+3. Lietotājs nosūta komandu ar atstarpi (piem.: / advices). Bots atbild, ka to neatpazīst un iesaka izmantot /help, lai iegūtu komandu sarakstu.
+4. Lietotājs nosūta komandu ar vēlmi izvēlēties kategoriju (piem.: /jokes category). Bots atpazīst komandu /jokes un nosūta tikai joku, neizvēloties kategoriju.
