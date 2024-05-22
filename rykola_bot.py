@@ -3,28 +3,28 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, Messa
 import json
 import random
 import string
-import qrcode
+
 from telegram.ext import CallbackContext
 # izveido bota pieslēgumu Telegram
 app = ApplicationBuilder().token("7012624613:AAE99uS7aVj_Ldqai9UzoegoJvxq-bnizpM").build()
 
 #функции:
-async def jokes_la():
+async def jokes_data():
     with open('jokes.json', 'r', encoding='utf-8') as joke_file:
         jokes = json.load(joke_file)
     random_joke = random.choice(jokes)
     return random_joke['joke']
-async def lifehacks_la():
+async def lifehacks_data():
     with open('life_hacks.json', 'r', encoding='utf-8') as lifehacks_file:
         lifehacks = json.load(lifehacks_file)
     random_lifehacks = random.choice(lifehacks)
     return random_lifehacks['life hacks']
-async def quotations_la():
+async def quotations_data():
     with open('quotations.json', 'r', encoding='utf-8') as quotation_file:
         quotation = json.load(quotation_file)
     random_quotations = random.choice(quotation)
     return random_quotations['quotation']
-async def advices_la():
+async def advices_data():
     with open('advices.json', 'r', encoding='utf-8') as advices_file:
         advices = json.load(advices_file)
     random_advices = random.choice(advices)
@@ -35,11 +35,11 @@ async def generate_password(length):
     generated_password = generate_password(length)
     print("Your password:", generated_password)
     return password
-async def quotations_lala():
-    with open('quotations.json', 'r', encoding='utf-8') as quotation1_file:
-        quotation1 = json.load(quotation1_file)
-    random_quotations1 = random.choice(quotation1)
-    return random_quotations1['quotation'], random_quotations1['author'] 
+async def quotations_author_data():
+    with open('quotations.json', 'r', encoding='utf-8') as quotation_author_file:
+        quotation_author = json.load(quotation_author_file)
+    random_quotations_author = random.choice(quotation_author)
+    return random_quotations_author['quotation'], random_quotations_author['author'] 
     
     
     
@@ -55,7 +55,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
     await update.message.reply_text(
         "Hi! My name is Rykola Bot. I will hold a conversation with you. "
-        "What do you want jokes/quotes/advice/lifehacks or random password, qrcode?",
+        "What do you want jokes/quotes/advice/lifehacks or random password?",
         reply_markup=ReplyKeyboardMarkup(
             reply_keyboard, one_time_keyboard=True, input_field_placeholder=""
         ),
@@ -64,24 +64,24 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
  
 async def jokes(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.effective_user)
-    await update.message.reply_text(await jokes_la())
+    await update.message.reply_text(await jokes_data())
 
 async def lifehacks(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.effective_user)
-    await update.message.reply_text(await lifehacks_la())
+    await update.message.reply_text(await lifehacks_data())
 
 async def quotations(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.effective_user)
-    await update.message.reply_text(await quotations_la())
+    await update.message.reply_text(await quotations_data())
 
-async def quotations1(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    quotation, author = await quotations_lala()
+async def quotations_author(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    quotation, author = await quotations_author_data()
     response = f"{quotation}\n— {author}"
     await update.message.reply_text(response)
 
 async def advices(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.effective_user)
-    await update.message.reply_text(await advices_la())
+    await update.message.reply_text(await advices_data())
 
 async def password(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(update.effective_user)
@@ -106,14 +106,33 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                     "5. /advices - gives random advice from the library "
                                     "6. /lifehacks - generates a random lifehack from the library "
                                     "7. /password - generates a random password of 10 characters. "
-                                    "8. /quotations1 - random quotation with the author's indication "
-                                    "9. /echo - responds that it hears the user's message")
+                                    "8. /quotations_author - random quotation with the author's indication "
+                                    "9. /echo - responds that it hears the user's message"
+                                    "10. /few_jokes - gives a certain number of jokes that the user chooses.")
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("I hear: " + update.message.text)
+    text =  update.message.text.replace("/echo ", "")
+    await update.message.reply_text("I hear: " + text)
 
 async def unknown_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Sorry, I don't know this command. Please use /help for a list of available commands.")
+
+async def few_jokes(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    txt = update.message.text
+    txt = txt.replace("/few_jokes ", "")
+  
+    if txt.isdigit() == False:  #pārbauda, vai lietotāja ievadītais teksts nav cipars.
+        await update.message.reply_text("It's not a number.")
+        return
+    
+    with open('jokes.json', 'r', encoding='utf-8') as jokes_file:
+        joke = json.load(jokes_file)
+   
+    for i in range(int(txt)):  #tas izvēlas nejaušus jokus, kuru skaitu izvēlas lietotājs.
+        random_jokes = random.choice(joke)
+        await update.message.reply_text(random_jokes['joke'])
+
+    return random_jokes['joke']
 
 
 
@@ -125,15 +144,16 @@ async def unknown_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 
 # savieno čata komandu ar funkciju
 app.add_handler(CommandHandler("start", start))
-app.add_handler(CommandHandler("jokes", jokes))
+app.add_handler(CommandHandler("jokes", jokes)) # /few_jokes 3
 app.add_handler(CommandHandler("lifehacks", lifehacks))
 app.add_handler(CommandHandler("quotations", quotations))
 app.add_handler(CommandHandler("advices", advices))
 app.add_handler(CommandHandler("password", password))
 app.add_handler(CommandHandler("help", help))
 app.add_handler(CommandHandler("hello", hello))
-app.add_handler(CommandHandler("quotations1", quotations1))
+app.add_handler(CommandHandler("quotations_author", quotations_author))
 app.add_handler(CommandHandler("echo", echo))
+app.add_handler(CommandHandler("few_jokes", few_jokes))
 app.add_handler(MessageHandler(filters.COMMAND, unknown_command))
 
 

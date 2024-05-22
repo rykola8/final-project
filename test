@@ -12,4 +12,4 @@
 1. Lietotājs nosūta komandu, kas nav sarakstā (piemēram, /jke). Bots atbild ar kļūdas ziņojumu, paskaidrojot, ka komanda nav atpazīta, un iesaka izmantot /help, lai iegūtu komandu sarakstu.
 2. Lietotājs nosūta tekstu ar komandu aiz tā (piemēram: hello world /echo). Bots atbild, ka to neatpazīst un iesaka izmantot /help, lai iegūtu komandu sarakstu.
 3. Lietotājs nosūta komandu ar atstarpi (piem.: / advices). Bots atbild, ka to neatpazīst un iesaka izmantot /help, lai iegūtu komandu sarakstu.
-4. Lietotājs nosūta komandu ar vēlmi izvēlēties kategoriju (piem.: /jokes category). Bots atpazīst komandu /jokes un nosūta tikai joku, neizvēloties kategoriju.
+4. Lietotājs nosūta komandu ar joku skaitu, bet ciparu vietā raksta simbolus (piemēram, /few_jokes five). Bots atbild, ka lietotājs nav ievadījis numuru
