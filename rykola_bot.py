@@ -93,7 +93,6 @@ async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    # Retrieve passport data
     text = update.message.text
     print(text)
     await update.message.reply_text("What? press /help for a list of commands ")
@@ -144,7 +143,7 @@ async def few_jokes(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # savieno čata komandu ar funkciju
 app.add_handler(CommandHandler("start", start))
-app.add_handler(CommandHandler("jokes", jokes)) # /few_jokes 3
+app.add_handler(CommandHandler("jokes", jokes)) 
 app.add_handler(CommandHandler("lifehacks", lifehacks))
 app.add_handler(CommandHandler("quotations", quotations))
 app.add_handler(CommandHandler("advices", advices))
@@ -157,7 +156,7 @@ app.add_handler(CommandHandler("few_jokes", few_jokes))
 app.add_handler(MessageHandler(filters.COMMAND, unknown_command))
 
 
-app.add_handler(MessageHandler(filters.TEXT, answer)) # type: ignore
+app.add_handler(MessageHandler(filters.TEXT, answer))
 
 # sāk bota darbību
 app.run_polling() 
